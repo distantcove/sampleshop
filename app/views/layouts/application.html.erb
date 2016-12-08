@@ -3,24 +3,35 @@
   <head>
     <title>Sample Shoppy</title>
     <%= csrf_meta_tags %>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
-  	<nav>
-  	  <ul>
-  	    <li>Home</li>
-  	    <li>Laundry Schedule</>
-  	    <li>Message Board</li>
-  	  </ul>
+  	<nav class= "navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+      	<ul class = "nav nav-pills">
+          <li role="presentation" class="active"><a href="#">Home</a></li>
+  	      <li role="presentation" class="active"><a href="#">Notices</a></li>
+  	      <li role="presentation" class="active"><a href="#">Laundry</a></li>
+  	    </ul>
+  	  </div>   	  
+     </nav>
+  	
   	</nav>  	
 
     <%= yield %>
     
-    <footer>
-      &copy; 2016 DistantCoveDesigns
+    <footer class="footer">
+      <div class="container"> 
+        <p class="text-muted">&copy; 2016 DistantCoveDesigns</p>
+      </div>
     </footer>
 
   </body>
