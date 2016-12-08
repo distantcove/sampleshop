@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sampleshop</title>
+    <title>Sample Shoppy</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,19 @@
   </head>
 
   <body>
+  	<nav>
+  	  <ul>
+  	    <li>Home</li>
+  	    <li>Laundry Schedule</>
+  	    <li>Message Board</li>
+  	  </ul>
+  	</nav>  	
+
     <%= yield %>
+    
+    <footer>
+      &copy; 2016 DistantCoveDesigns
+    </footer>
+
   </body>
 </html>
