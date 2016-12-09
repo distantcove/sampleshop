@@ -18,9 +18,14 @@ html, body {
 }
 
 .navbar-default {
-	background-color: #f5f5f5;
+	background-color: #fff;
 	border-color: $background-1;
-	align: center;
+	height: 50px;
+}
+
+#nav-container {
+	padding-left: 330px;
+	height: 100%;
 }
 
 .nav-pills>li.active>a {
@@ -28,8 +33,9 @@ html, body {
     line-height: 46px;
     margin: 10px;
     background-color: #CEE2DA;
-    display: block;
     text-align: center;
+    display: inline-block;
+    vertical-align: center;
 	color: black;
     font-size: 14px;
 }
@@ -45,7 +51,7 @@ html, body {
 }
 
 .nav-pills>li {
-	float: right;
+	float: center;
 }
 
 body > .container {
@@ -58,7 +64,7 @@ body > .container {
 
 h1 {
 	margin: 0;
-	padding: 75px 0px 10px 50px;
+	padding: 75px 0px 10px 0px;
 }
 
 h2 {
@@ -73,15 +79,21 @@ h3 {
 
 .footer {
     position: absolute;
+    text-align: center;
     padding: 0px;
     margin: 0px;
     width: 100%;
-    height: auto;
+    height: 50px;
+    left: 0px;
+    right: 0px;
     background-color: #f5f5f5;
 }
 
 #footer-container {
-	
+	height: 100%;
+	width: 100%;
+	text-align: right;
+	padding-top: 20px;
 }
 
 p.text-muted {
@@ -94,6 +106,13 @@ p.text-muted {
 	padding-top: 125px;
 	font: 100% $font-stack-alt;
 	font-size: 5em;
+	text-align: center;
+}
+
+///// MESSAGES PAGE /////
+
+#message-head {
+	padding-top: 125px;
 	text-align: center;
 }
 

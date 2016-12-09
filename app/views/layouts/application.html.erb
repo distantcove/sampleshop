@@ -18,24 +18,20 @@
 
   <body>
   	<nav class= "navbar navbar-default navbar-fixed-top">
-      <div class="container">
+      <div class="container" id="nav-container">
       	<ul class = "nav nav-pills">
-          <li role="presentation" class="active"><a href="#">Home</a></li>
-  	      <li role="presentation" class="active"><a href="#">Messages</a></li>
-  	      <li role="presentation" class="active"><a href="#">Laundry</a></li>
+          <li role="presentation" class="active"><a href="index">Home</a></li>
+  	      <li role="presentation" class="active"><a href="/static_pages/schedule">Laundry</a></li>
+  	      <li role="presentation" class="active"><a href="/static_pages/messages">Messages</a></li>
   	    </ul>
   	  </div>   	  
     </nav>
-
-    <div class="footer-container">
-
-    <%= yield %>
     
-    </div>
+    <%= yield %>
 
     <footer class="footer">
       <div class="container" id="footer-container">
-      	...
+      	&copy: 2016 DistantCoveDesigns
       </div>
     </footer>
 
