@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Oswald|PT+Sans|Permanent+Marker|Raleway|Roboto" rel="stylesheet">
+
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
@@ -15,7 +18,7 @@
 
   <body>
   	<nav class= "navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
+      <div class="container">
       	<ul class = "nav nav-pills">
           <li role="presentation" class="active"><a href="#">Home</a></li>
   	      <li role="presentation" class="active"><a href="#">Messages</a></li>
@@ -24,16 +27,15 @@
   	  </div>   	  
     </nav>
 
-    <div class="container">
+    <div class="footer-container">
 
     <%= yield %>
     
-    <div class="push"></div>
     </div>
 
     <footer class="footer">
-      <div class="container"> 
-        <p class="text-muted">&copy; 2016 DistantCoveDesigns</p>
+      <div class="container" id="footer-container">
+      	...
       </div>
     </footer>
 
