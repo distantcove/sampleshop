@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :messages
   get 'static_pages/messages'
   get 'static_pages/schedule'
   get 'static_pages/index'
