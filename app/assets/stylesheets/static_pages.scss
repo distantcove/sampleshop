@@ -17,6 +17,10 @@ html, body {
 	height: 100%;
 }
 
+body {
+	padding-top: 120px;
+}
+
 .navbar-default {
 	background-color: #fff;
 	border-color: $background-1;
@@ -63,9 +67,9 @@ body > .container {
 }
 
 h1 {
-	margin: 0;
-	padding: 75px 0px 10px 0px;
-}
+	  margin: 0;
+	  text-align: center;
+  }
 
 h2 {
 	margin: 0;
@@ -111,8 +115,5 @@ p.text-muted {
 
 ///// MESSAGES PAGE /////
 
-#message-head {
-	padding-top: 125px;
-	text-align: center;
-}
+
 

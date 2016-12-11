@@ -20,9 +20,9 @@
   	<nav class= "navbar navbar-default navbar-fixed-top">
       <div class="container" id="nav-container">
       	<ul class = "nav nav-pills">
-          <li role="presentation" class="active"><a href="index">Home</a></li>
-  	      <li role="presentation" class="active"><a href="/static_pages/schedule">Laundry</a></li>
-  	      <li role="presentation" class="active"><a href="/static_pages/messages">Messages</a></li>
+          <li role="presentation" class="active"><%= link_to "Home", root_path %></li>
+  	      <li role="presentation" class="active"><%= link_to "Laundry", static_pages_schedule_path%></li>
+  	      <li role="presentation" class="active"><%= link_to "Messages", messages_path %></li>
   	    </ul>
   	  </div>   	  
     </nav>
