@@ -4,29 +4,30 @@
 
 <%= link_to 'Write a Message', new_message_path %>
 
-<div class="container">
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Note</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @messages.each do |message| %>
-        <tr>
-          <td><%= message.title %></td>
-          <td><%= message.note %></td>
-          <td><%= link_to 'View', message %></td>
-          <td><%= link_to 'Edit', edit_message_path(message) %></td>
-          <td><%= link_to 'Delete', message, method: :delete, data: { confirm: 'Delete?' } %></td>
-        </tr>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4 col-md-4">Title</div>
+    <div class="col-sm-4 col-md-4">Note</div>
+    <div class="col-sm-4 col-md-4">Options</div>
+  </div>
+  <div class="row">
+    <% @messages.each do |message| %>
+          <div class="col-sm-4 col-md-4"><%= message.title %></div>
+          <div class="col-sm-4 col-md-4"><%= message.note %></div>
+          <div class="col-sm-4 col-md-4">
+            <div class="btn-group" role="group" aria-label="...">
+              <button type="button" class="btn btn-default"><%= link_to 'View', message %></button>
+              <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_message_path(message) %></button>
+              <button type="button" class="btn btn-default"><%= link_to 'Delete', message, method: :delete, data: { confirm: 'Delete?' } %></button>
+            </div>
+          </div>
+  </div>
       <% end %>
-    </tbody>
-  </table>
+
+    </div>  
+  </div>
 </div>
+
 
 <br>
 
