@@ -24,9 +24,17 @@
   	      <li role="presentation" class="active"><%= link_to "Laundry", static_pages_schedule_path%></li>
   	      <li role="presentation" class="active"><%= link_to "Messages", messages_path %></li>
   	    </ul>
-  	  </div>   	  
+  	  </div>
+        <%= form_tag("/messages", method: "get") do %>
+          <%= label_tag(:q, "Search Messages:") %>
+          <%= text_field_tag(:q) %>
+          <%= submit_tag("Search") %>
+        <% end %>   	  
     </nav>
     
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
     <%= yield %>
 
     <footer class="footer">

@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
     if params[:q]
       search_term = params[:q]
       # return search term filtered list here
-      @messages = Message.where("name LIKE ?", "%#{search_term}%")
+      @messages = Message.where("title LIKE ?", "%#{search_term}%")
     else  
       @messages = Message.all
     end  
