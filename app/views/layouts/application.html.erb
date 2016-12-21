@@ -23,17 +23,36 @@
           <li role="presentation" class="active"><%= link_to "Home", root_path %></li>
   	      <li role="presentation" class="active"><%= link_to "Laundry", static_pages_schedule_path%></li>
   	      <li role="presentation" class="active"><%= link_to "Messages", messages_path %></li>
-  	    </ul>
-  	  </div>
-        <%= form_tag("/messages", method: "get") do %>
-          <%= label_tag(:q, "Search Messages:") %>
-          <%= text_field_tag(:q) %>
-          <%= submit_tag("Search") %>
-        <% end %>   	  
+  	    <!-- </ul>
+        <ul class="nav pull-right"> -->
+          <li id="search-form">
+          <%= form_tag("/messages", method: "get") do %>
+            <%= label_tag(:q, "Search Messages:") %>
+            <%= text_field_tag(:q) %>
+            <%= submit_tag("Search") %>
+          <% end %>   	  
+          </li>
+          <li id="login-form">
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else %>
+            <%= link_to('Login', new_user_session_path) %>
+          <% end %>
+          </li>  
+        </ul>      
     </nav>
     
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <div>
+      <% if notice %>
+        <p id="notice" class="alert alert-success"><%= notice %></p>
+      <% end %>
+    </div>
+
+    <div>
+      <% if alert %>
+        <p id="alert" class="alert alert-warning"><%= alert %></p>
+      <% end %>
+    </div>
 
     <%= yield %>
 

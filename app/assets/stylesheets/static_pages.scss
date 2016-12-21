@@ -58,8 +58,24 @@ body {
 	float: center;
 }
 
-form {
+#search-form {
 	float: right;
+	margin-top: 15px;
+}
+
+#login-form {
+	clear: right;
+	float: right;
+}
+
+#notice {
+	margin-top: 75px;
+	text-align: center;
+}
+
+#alert {
+	margin-top: 75px;
+	text-align: center;
 }
 
 body > .container {
