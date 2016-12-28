@@ -2,7 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$font-stack: 'PT Sans', sans-serif;;
+// $font-stack: verdana, arial, helvetica, sans-serif;
+$font-stack: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 $font-stack-alt: 'Permanent Marker', cursive;
 $color-1: #250912;
 $background-1: #FFFFFF;
@@ -135,10 +136,25 @@ p.text-muted {
 
 ///// LOGIN PAGE /////
 
+#login-body {
+	  background-color: #eee;
+}
+
 #login-block {
 	padding-top: 100px;
 	text-align: center;
 }
 
+///// SIGNUP PAGE /////
 
+#signup-block {
+	padding-top: 100px;
+	text-align: center;
+}
+
+///// FORGOT PASS PAGE /////
+
+#forgot-block {
+	padding-left: 100px;
+}
 
