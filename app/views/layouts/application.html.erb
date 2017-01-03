@@ -11,20 +11,19 @@
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
   </head>
-
   <body>
+
   	<nav class= "navbar navbar-default navbar-fixed-top">
-      <div class="container" id="nav-container">
+      <div class="container-fluid" id="nav-container">
       	<ul class = "nav nav-pills">
           <li role="presentation" class="active"><%= link_to "Home", root_path %></li>
   	      <li role="presentation" class="active"><%= link_to "Laundry", static_pages_schedule_path%></li>
   	      <li role="presentation" class="active"><%= link_to "Messages", messages_path %></li>
-  	    <!-- </ul>
-        <ul class="nav pull-right"> -->
           <li id="search-form">
           <%= form_tag("/messages", method: "get") do %>
             <%= label_tag(:q, "Search Messages:") %>
@@ -42,25 +41,26 @@
         </ul>      
     </nav>
     
-    <div>
-      <% if notice %>
-        <p id="notice" class="alert alert-success"><%= notice %></p>
-      <% end %>
-    </div>
+    <div class="container">
 
-    <div>
-      <% if alert %>
-        <p id="alert" class="alert alert-warning"><%= alert %></p>
-      <% end %>
-    </div>
+      <div>
+        <% if notice %>
+          <p id="notice" class="alert alert-success"><%= notice %></p>
+        <% end %>
+      </div>
 
-    <%= yield %>
+      <div>
+        <% if alert %>
+          <p id="alert" class="alert alert-warning"><%= alert %></p>
+        <% end %>
+      </div>
+
+      <%= yield %>
+
+    </div>
 
     <footer class="footer">
-      <div class="container" id="footer-container">
-      	&copy: 2016 DistantCoveDesigns
-      </div>
+        &copy 2017 DistantCoveDesigns
     </footer>
-
-  </body>
+  </body>  
 </html>
