@@ -1,10 +1,11 @@
 <div class="col-sm-4 col-md-4"><%= message.title %></div>
 <div class="col-sm-4 col-md-4"><%= message.note %></div>
 <div class="col-sm-4 col-md-4">
-  <div class="btn-group" role="group" aria-label="...">
-    <button type="button" class="btn btn-default"><%= link_to 'View', message %></button>
-    <button type="button" class="btn btn-default"><%= link_to 'Edit', edit_message_path(message) %></button>
-    <button type="button" class="btn btn-default"><%= link_to 'Delete', message, method: :delete, data: { confirm: 'Delete?' } %></button>
-  </div>
+  <%= link_to ('<span class="glyphicon glyphicon-eye-open"></span>').html_safe, message %>
+<div id="edit-message">
+  <%= link_to ('<span class="glyphicon glyphicon-edit"></span>').html_safe, edit_message_path(message) %>
 </div>
-       
+  <%= link_to ('<span class="glyphicon glyphicon-trash"></span>').html_safe, message, method: :delete, data: { confirm: 'Delete?' } %></button>
+</div>
+
+  

@@ -39,7 +39,6 @@ h2 {
 }
 
 #nav-container {
-	padding-left: 330px;
 	height: 100%;
 }
 
@@ -139,6 +138,29 @@ p.text-muted {
 #login-block {
 	padding-top: 0px;
 	text-align: center;
+}
+
+///// MESSAGES PAGE /////
+
+#messages-h1 {
+	text-align: center;
+}
+
+div#title {
+    font-weight: bold;
+}
+
+#edit-message {
+	display: inline;
+	padding: 0px 5px 0px 5px;
+}
+
+#message-header-row {
+	padding-bottom: 15px;
+}
+
+a.btn.btn-primary {
+    margin: 0px 0px 15px 15px;
 }
 
 ///// SIGNUP PAGE /////

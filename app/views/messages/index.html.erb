@@ -1,18 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Messages</h1>
+<h1 id="messages-h1">Messages</h1>
 
   <%= link_to new_message_path, class: "btn btn-primary" do %>
     <i class="glyphicon glyphicon-pencil" aria-hidden="true"></i>
   <% end %>
 
-</button>
-
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-4 col-md-4">Title</div>
-    <div class="col-sm-4 col-md-4">Note</div>
-    <div class="col-sm-4 col-md-4">Options</div>
+  <div class="row" id="message-header-row">
+    <div class="col-sm-4 col-md-4" id="title">Title</div>
+    <div class="col-sm-4 col-md-4" id="title">Note</div>
+    <div class="col-sm-4 col-md-4" id="title">Options</div>
   </div>
   <div class="row">
     <%= render @messages %> 
