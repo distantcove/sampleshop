@@ -1,11 +1,15 @@
-<div class="col-sm-4 col-md-4"><%= message.title %></div>
-<div class="col-sm-4 col-md-4"><%= message.note %></div>
-<div class="col-sm-4 col-md-4">
-  <%= link_to ('<span class="glyphicon glyphicon-eye-open"></span>').html_safe, message %>
-<div id="edit-message">
-  <%= link_to ('<span class="glyphicon glyphicon-edit"></span>').html_safe, edit_message_path(message) %>
-</div>
-  <%= link_to ('<span class="glyphicon glyphicon-trash"></span>').html_safe, message, method: :delete, data: { confirm: 'Delete?' } %></button>
-</div>
+
+<div class="container-fluid">
+  <div class="col-sm-12 col-md-3 text-nowrap"><%= message.title %></div>
+  <div class="col-sm-12 col-md-3 text-nowrap"><%= message.note %></div>
+  <div class="col-sm-12 col-md-3"><%= message.user %></div>
+  <div class="col-sm-12 col-md-3">
+    <%= link_to ('<span class="glyphicon glyphicon-eye-open"></span>').html_safe, message %>
+  <div id="edit-message">
+    <%= link_to ('<span class="glyphicon glyphicon-edit"></span>').html_safe, edit_message_path(message) %>
+  </div>
+    <%= link_to ('<span class="glyphicon glyphicon-trash"></span>').html_safe, message, method: :delete, data: { confirm: 'Delete?' } %></button>
+  </div>
+</div>  
 
   

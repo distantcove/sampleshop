@@ -2,15 +2,20 @@
 
 <h1 id="messages-h1">Messages</h1>
 
-  <%= link_to new_message_path, class: "btn btn-primary" do %>
+<div id="new-message-link">
+  <%= link_to ('<span class="glyphicon glyphicon-pencil"></span>').html_safe, new_message_path %>
+</div>
+
+  <!-- <%= link_to new_message_path, class: "btn btn-primary" do %>
     <i class="glyphicon glyphicon-pencil" aria-hidden="true"></i>
-  <% end %>
+  <% end %> -->
 
 <div class="container-fluid">
   <div class="row" id="message-header-row">
-    <div class="col-sm-4 col-md-4" id="title">Title</div>
-    <div class="col-sm-4 col-md-4" id="title">Note</div>
-    <div class="col-sm-4 col-md-4" id="title">Options</div>
+    <div class="col-sm-12 col-md-3" id="title">Subject</div>
+    <div class="col-sm-12 col-md-3" id="title">Message</div>
+    <div class="col-sm-12 col-md-3" id="title">User</div>
+    <div class="col-sm-12 col-md-3" id="title"></div>
   </div>
   <div class="row">
     <%= render @messages %> 
